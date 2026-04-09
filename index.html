@@ -624,12 +624,13 @@ section {
 
 /* ── REVEAL ── */
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.animate-hidden { opacity: 0; transform: translateY(28px); }
+.reveal.animate-hidden.visible { opacity: 1; transform: translateY(0); }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
@@ -671,7 +672,7 @@ section {
 <!-- ═══════════════ HERO ═══════════════ -->
 <div class="hero" id="sec0">
   <div class="hero-inner">
-    <div class="hero-tag">Global IT &amp; AI Transformation Leader</div>
+    <div class="hero-tag">Global IT &amp; AI Transformation Leader &nbsp;·&nbsp; AI-first Operations at Scale</div>
     <h1 class="name">Harish <span>Vasista</span></h1>
     <p class="hero-sub">Head of IT Global Support, Reporting &amp; Analytics &nbsp;·&nbsp; Nokia Networks</p>
     <div class="creds">
@@ -682,12 +683,12 @@ section {
     <div class="stats-bar">
       <div class="stat"><span class="stat-num">27</span><span class="stat-label">Years Experience</span></div>
       <div class="stat"><span class="stat-num">6</span><span class="stat-label">Global Companies</span></div>
-      <div class="stat"><span class="stat-num">300+</span><span class="stat-label">FTE Led Globally</span></div>
-      <div class="stat"><span class="stat-num">20%</span><span class="stat-label">YoY Cost Reduction</span></div>
+      <div class="stat"><span class="stat-num">600+</span><span class="stat-label">FTE Led Globally</span></div>
+      <div class="stat"><span class="stat-num">20%+</span><span class="stat-label">YoY Cost Optimisation</span></div>
     </div>
     <div class="contact-row">
       Bangalore, India &nbsp;·&nbsp;
-      <a href="mailto:harishnv@gmail.com">harishnv@gmail.com</a> &nbsp;·&nbsp;
+      <a href="/cdn-cgi/l/email-protection#274f46554e544f495167404a464e4b0944484a"><span class="__cf_email__" data-cfemail="513930233822393f2711363c30383d7f323e3c">[email&#160;protected]</span></a> &nbsp;·&nbsp;
       <a href="https://www.linkedin.com/in/harishnv/" target="_blank" rel="noopener">linkedin.com/in/harishnv</a> &nbsp;·&nbsp;
       +91 72591 00388
     </div>
@@ -721,9 +722,9 @@ section {
     <div class="domain-card" onclick="openModal('ai')">
       <span class="domain-icon di-1">AI</span>
       <div class="domain-title">AI &amp; Intelligent<br>Automation</div>
-      <div class="domain-desc">Hands-on leadership of Nokia's live AI-augmented ITSM programme using ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI. Personal experience with agentic AI and Unix scripting.</div>
+      <div class="domain-desc">Technology and AI-savvy leader with hands-on experience designing and running AI-first, AI-augmented processes and operations at enterprise scale — deploying ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks in production.</div>
       <div class="domain-tags">
-        <span class="tag">Now Assist</span><span class="tag">Vertex AI</span><span class="tag">Azure OpenAI</span><span class="tag">Agentic AI</span>
+        <span class="tag">Now Assist</span><span class="tag">Vertex AI</span><span class="tag">Azure OpenAI</span><span class="tag">Agentic AI</span><span class="tag">AI-first Operations</span>
       </div>
       <div class="click-hint">▸ Click to expand</div>
     </div>
@@ -751,9 +752,9 @@ section {
     <div class="domain-card" onclick="openModal('team')">
       <span class="domain-icon di-4">TEAM</span>
       <div class="domain-title">Global Team &amp;<br>Delivery Leadership</div>
-      <div class="domain-desc">300+ FTE global teams across a follow-the-sun model covering Americas, EMEA, APAC, and China. Built L3/L4 TEC from scratch with 40%+ cost savings. Multi-vendor ecosystem governance.</div>
+      <div class="domain-desc">600+ FTE global teams (employees and subcontractors) across a follow-the-sun model covering Americas, EMEA, APAC, and China. Built L3/L4 TEC from scratch with 40%+ cost savings. Multi-vendor ecosystem governance.</div>
       <div class="domain-tags">
-        <span class="tag">300+ FTE</span><span class="tag">Americas</span><span class="tag">EMEA</span><span class="tag">APAC</span><span class="tag">China</span>
+        <span class="tag">600+ FTE</span><span class="tag">Americas</span><span class="tag">EMEA</span><span class="tag">APAC</span><span class="tag">China</span>
       </div>
       <div class="click-hint">▸ Click to expand</div>
     </div>
@@ -761,7 +762,7 @@ section {
     <div class="domain-card" onclick="openModal('telco')">
       <span class="domain-icon di-5">TELCO</span>
       <div class="domain-title">Telecom &amp; Networking<br>Domain</div>
-      <div class="domain-desc">27-year telecom career: Nokia, Alcatel-Lucent, Extreme ecosystem, AT&amp;T &amp; Verizon direct ownership, L2/L3 networking, FTTH, IP routing, Riverstone Networks startup.</div>
+      <div class="domain-desc">27-year telecom career: Nokia, Alcatel-Lucent, AT&amp;T &amp; Verizon direct ownership, L2/L3 networking, FTTH, IP routing, and Riverstone Networks startup.</div>
       <div class="domain-tags">
         <span class="tag">Nokia</span><span class="tag">Alcatel-Lucent</span><span class="tag">AT&amp;T &amp; Verizon</span><span class="tag">FTTH</span>
       </div>
@@ -875,7 +876,7 @@ section {
     <div class="role-card rc-5">
       <div class="role-title">Senior Program Director — Telecom</div>
       <div class="stars">★★★★½ Strong</div>
-      <div class="role-desc">27-year telecom career: Nokia, Alcatel-Lucent, Extreme ecosystem. Deep Nokia knowledge &amp; Tier-1 operator relationships.</div>
+      <div class="role-desc">27-year telecom career: Nokia, Alcatel-Lucent, Extreme Networks. Deep Nokia ecosystem knowledge &amp; Tier-1 operator relationships.</div>
     </div>
   </div>
 
@@ -886,8 +887,8 @@ section {
     <div class="diff-card">
       <div class="diff-icon" style="background:rgba(37,99,235,0.15);">🤖</div>
       <div>
-        <div class="diff-title">Live AI Programme</div>
-        <div class="diff-text">Hands-on with ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI in production. Overhauling Nokia's ITSM processes end-to-end. Live today, not theoretical.</div>
+        <div class="diff-title">Hands-on AI & Technology Fluency</div>
+        <div class="diff-text">Personally hands-on with ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks — designing and running AI-first, AI-augmented processes and operations at enterprise scale. Live in production, not theoretical.</div>
       </div>
     </div>
     <div class="diff-card">
@@ -925,7 +926,7 @@ section {
       <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn Profile
     </a>
-    <a href="mailto:harishnv@gmail.com" class="clink clink-secondary">✉️ harishnv@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#e28a83908b918a8c94a2858f838b8ecc818d8f" class="clink clink-secondary">✉️ <span class="__cf_email__" data-cfemail="f49c95869d879c9a82b49399959d98da979b99">[email&#160;protected]</span></a>
     <a href="tel:+917259100388" class="clink clink-secondary">📞 +91 72591 00388</a>
   </div>
 </div>
@@ -938,7 +939,7 @@ section {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── MODAL DATA ──
 const modals = {
   itops: {
@@ -946,7 +947,7 @@ const modals = {
     title: 'IT Operations & Service Management',
     paras: [
       'At Nokia, leads the global 24×7 Client Service Management organisation — owning end-to-end IT application, infrastructure, cloud, and end-user support for Nokia\'s worldwide workforce across Americas, EMEA, APAC, and China.',
-      'Direct accountability for Critical Incident Management, SLA compliance, change management, and service request fulfilment. Built PowerBI executive dashboards and KPI governance frameworks for IT ops and contractual reporting. Delivered 20% YoY cost reduction for two consecutive years.'
+      'Direct accountability for Critical Incident Management, SLA compliance, change management, and service request fulfilment. Built PowerBI executive dashboards and KPI governance frameworks for IT ops and contractual reporting. Delivered 20%+ YoY cost optimisation over multiple consecutive years.'
     ],
     tags:['Global 24×7 Support','ITIL Incident/Problem/Change','Critical Incident Mgmt','PowerBI Dashboards','IT Ops & Contractual Reporting','SLA/KPI Governance with External Vendors','Multi-vendor Ecosystem','ISO27001 & SOX Compliance']
   },
@@ -954,10 +955,10 @@ const modals = {
     badge: { text:'AI', bg:'rgba(13,148,136,0.2)', color:'#5eead4' },
     title: 'AI & Intelligent Automation',
     paras: [
-      'Currently leading Nokia\'s AI-augmented ITSM process design programme as acting Head of ITSM & Ecosystem Enablement — deploying ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI to overhaul enterprise IT processes end-to-end, making them AI-first and future-proof.',
-      'Brings personal hands-on experience with agentic AI platforms and Unix scripting — enabling credible technical engagement at the intersection of AI strategy and enterprise execution. Deep believer in AI Skill Developers as the next critical capability for standardising organisational AI output.'
+      'Technology and AI-savvy leader with hands-on experience designing, deploying, and scaling AI-first and AI-augmented processes and operations across enterprise environments. Leads live AI programme deployments using ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI — overhauling enterprise IT and operational processes end-to-end, making them AI-first, future-proof, and aligned with corporate strategy.',
+      'Personally hands-on with agentic AI platforms, intelligent automation frameworks, and Unix scripting — bridging the gap between AI strategy and enterprise execution with direct technical credibility. A deep believer in AI Skill Developers as the next critical organisational capability: standardising AI outputs, ensuring consistent delivery across teams and geographies, and building the governance layer that makes enterprise AI scale reliably.'
     ],
-    tags:['ServiceNow Now Assist','Google Vertex AI','Azure OpenAI','Agentic AI Platforms','Unix Scripting','PowerApps Automation','AI-first Process Design','AI Skill Developer Concept','Intelligent Automation']
+    tags:['ServiceNow Now Assist','Google Vertex AI','Azure OpenAI','Agentic AI Platforms','Unix Scripting','PowerApps Automation','AI-first Process Design','AI-augmented Operations at Scale','AI Skill Developer Concept','Intelligent Automation','Enterprise AI Governance']
   },
   pmo: {
     badge: { text:'PMO', bg:'rgba(242,169,0,0.2)', color:'#fcd34d' },
@@ -981,19 +982,19 @@ const modals = {
     badge: { text:'TEAM', bg:'rgba(16,185,129,0.2)', color:'#6ee7b7' },
     title: 'Global Team & Delivery Leadership',
     paras: [
-      'Built and led 300+ FTE global teams across a follow-the-sun operating model covering Americas, EMEA, APAC, and China. Built the Global Technical Expertise Centre (L3/L4) for Alcatel-Lucent\'s FTTH product line from scratch — scaling to ~45 professionals and achieving 40%+ cost savings for Tier-1 operators AT&T and Verizon.',
+      'Built and led 600+ FTE global teams — spanning employees and subcontractors — across a follow-the-sun operating model covering Americas, EMEA, APAC, and China. Built the Global Technical Expertise Centre (L3/L4) for Alcatel-Lucent\'s FTTH product line from scratch — scaling to ~45 professionals and achieving 40%+ cost savings for Tier-1 operators AT&T and Verizon.',
       'Deep expertise in global team building, succession planning, leadership pipeline development, and multi-vendor ecosystem governance. Consistently builds high-performance, customer-centric cultures across geographically distributed teams.'
     ],
-    tags:['300+ FTE Global Teams','Follow-the-Sun Operations','Americas + EMEA + APAC + China','L3/L4 TEC Built from Scratch','40%+ Cost Savings','Succession Planning','Leadership Pipeline','Multi-vendor Governance']
+    tags:['600+ FTE Global Teams','Employees & Subcontractors','Follow-the-Sun Operations','Americas + EMEA + APAC + China','L3/L4 TEC Built from Scratch','40%+ Cost Savings','Succession Planning','Leadership Pipeline','Multi-vendor Governance']
   },
   telco: {
     badge: { text:'TELCO', bg:'rgba(139,92,246,0.2)', color:'#c4b5fd' },
     title: 'Telecom & Networking Domain',
     paras: [
-      '27-year telecom career spanning Nokia (current), Alcatel-Lucent, Riverstone Networks (startup acquired by Alcatel-Lucent), Extreme Networks (via Avaya), and Infosys/Nortel. Deep Nokia ecosystem knowledge providing unique perspective for Ericsson and other telecom vendor environments.',
+      '27-year telecom career spanning Nokia (current), Alcatel-Lucent, Riverstone Networks (startup acquired by Alcatel-Lucent), Extreme Networks (via Avaya), and Infosys/Nortel. Deep Nokia ecosystem knowledge and hands-on experience with Tier-1 operators AT&T and Verizon.',
       'Direct client ownership of AT&T and Verizon at Alcatel-Lucent — managing escalations, outcome accountability, and QBR governance for mission-critical 24×7 product support. L2/L3 networking expertise from Nortel Passport product work at Infosys.'
     ],
-    tags:['Nokia Ecosystem','Alcatel-Lucent','Ericsson Ecosystem','AT&T & Verizon Direct','L2/L3 Networking','FTTH','IP Routing','Riverstone Networks Startup','Nortel/Passport Products']
+    tags:['Nokia Ecosystem','Alcatel-Lucent','Extreme Networks','AT&T & Verizon Direct','L2/L3 Networking','FTTH','IP Routing','Riverstone Networks Startup','Nortel/Passport Products']
   }
 };
 
@@ -1033,6 +1034,7 @@ const revealObserver = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(function(el) {
+  el.classList.add('animate-hidden');
   revealObserver.observe(el);
 });
 
@@ -1047,19 +1049,4 @@ document.querySelectorAll('.dot').forEach(function(dot) {
 const sections = ['sec0','sec1','sec2','sec3','sec4'];
 const dotObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      document.querySelectorAll('.dot').forEach(function(dot) {
-        dot.classList.toggle('active', dot.getAttribute('data-target') === id);
-      });
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(function(id) {
-  const el = document.getElementById(id);
-  if (el) dotObserver.observe(el);
-});
-</script>
-</body>
-</html>
+    if (entry.isInters
