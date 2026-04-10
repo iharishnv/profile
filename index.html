@@ -3,665 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harish Vasista — Global IT & AI Transformation Leader</title>
+<title>Harish Vasista — Global IT &amp; AI Transformation Leader</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
-
 :root {
-  --navy: #0f1f45;
-  --blue: #2563eb;
-  --gold: #f2a900;
-  --teal: #0d9488;
-  --rose: #e11d48;
-  --mint: #10b981;
-  --white: #ffffff;
-  --muted: #64748b;
-  --light: #eaf1fb;
-  --mid: #94a3b8;
-}
-
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: var(--navy);
-  color: var(--white);
-  overflow-x: hidden;
-}
-
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 2rem 6rem;
-  position: relative;
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(37,99,235,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(242,169,0,0.1) 0%, transparent 55%),
-    #0f1f45;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-}
-
-.hero-inner { position: relative; z-index: 2; max-width: 860px; }
-
-.hero-tag {
-  display: inline-block;
-  background: rgba(37,99,235,0.2);
-  border: 1px solid rgba(37,99,235,0.4);
-  color: #93c5fd;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.35rem 1rem;
-  border-radius: 100px;
-  margin-bottom: 1.5rem;
-  animation: fadeUp 0.6s 0.2s both;
-}
-
-h1.name {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.6rem;
-  animation: fadeUp 0.7s 0.4s both;
-}
-
-h1.name span { color: var(--gold); }
-
-.hero-sub {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: #93c5fd;
-  margin-bottom: 1.2rem;
-  animation: fadeUp 0.7s 0.55s both;
-}
-
-.creds {
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.7s 0.7s both;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: center;
-}
-
-.cred {
-  font-size: 0.72rem;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 0.2rem 0.65rem;
-  border-radius: 4px;
-  color: #cbd5e1;
-  letter-spacing: 0.03em;
-}
-
-.stats-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2rem;
-  animation: fadeUp 0.7s 0.85s both;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.stat {
-  padding: 1rem 2rem;
-  border-right: 1px solid rgba(255,255,255,0.08);
-  text-align: center;
-  background: rgba(255,255,255,0.03);
-}
-
-.stat:last-child { border-right: none; }
-
-.stat-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--gold);
-  display: block;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 0.68rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 0.3rem;
-}
-
-.contact-row {
-  font-size: 0.85rem;
-  color: var(--muted);
-  animation: fadeUp 0.7s 1s both;
-}
-
-.contact-row a { color: #93c5fd; text-decoration: none; }
-.contact-row a:hover { color: var(--gold); transition: color 0.2s; }
-
-.scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  animation: fadeUp 0.7s 1.4s both;
-}
-
-.scroll-hint span { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; }
-
-.scroll-arrow {
-  width: 20px; height: 32px;
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
-  position: relative;
-}
-
-.scroll-arrow::after {
-  content: '';
-  position: absolute;
-  top: 5px; left: 50%;
-  transform: translateX(-50%);
-  width: 4px; height: 8px;
-  background: var(--muted);
-  border-radius: 2px;
-  animation: bob 1.5s infinite;
-}
-
-/* ── LAYOUT ── */
-.divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(37,99,235,0.25), transparent);
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-section {
-  display: block;
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.section-label::after {
-  content: '';
-  width: 30px;
-  height: 1px;
-  background: var(--gold);
-  opacity: 0.5;
-}
-
-.section-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  line-height: 1.1;
-}
-
-/* ── DOMAIN GRID ── */
-.domains-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.07);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.domain-card {
-  background: rgba(15,31,69,0.95);
-  padding: 1.8rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  position: relative;
-}
-
-.domain-card:hover {
-  background: rgba(37,99,235,0.12);
-  transform: scale(1.02);
-  z-index: 2;
-}
-
-.domain-icon {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.22rem 0.55rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 0.8rem;
-}
-
-.di-0 { background: rgba(37,99,235,0.2); color: #93c5fd; border: 1px solid rgba(37,99,235,0.3); }
-.di-1 { background: rgba(13,148,136,0.2); color: #5eead4; border: 1px solid rgba(13,148,136,0.3); }
-.di-2 { background: rgba(242,169,0,0.2); color: #fcd34d; border: 1px solid rgba(242,169,0,0.3); }
-.di-3 { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.3); }
-.di-4 { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
-.di-5 { background: rgba(139,92,246,0.2); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.3); }
-
-.domain-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-  line-height: 1.2;
-}
-
-.domain-desc {
-  font-size: 0.78rem;
-  color: var(--mid);
-  line-height: 1.6;
-}
-
-.domain-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  margin-top: 0.8rem;
-}
-
-.tag {
-  font-size: 0.62rem;
-  padding: 0.15rem 0.45rem;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.05);
-  color: var(--mid);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.click-hint {
-  font-size: 0.65rem;
-  color: rgba(147,197,253,0.5);
-  margin-top: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-/* ── TIMELINE ── */
-.timeline {
-  position: relative;
-  padding-left: 2.2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0.45rem;
-  top: 0.8rem;
-  bottom: 0.8rem;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--blue), var(--teal), var(--gold));
-}
-
-.tl-item {
-  position: relative;
-  margin-bottom: 1.2rem;
-  padding: 1.2rem 1.5rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 12px;
-  transition: all 0.25s;
-}
-
-.tl-item:hover {
-  background: rgba(37,99,235,0.08);
-  border-color: rgba(37,99,235,0.3);
-  transform: translateX(6px);
-}
-
-.tl-item::before {
-  content: '';
-  position: absolute;
-  left: -1.95rem;
-  top: 1.5rem;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  border: 2px solid var(--blue);
-  background: var(--navy);
-}
-
-.tl-item.startup::before { border-color: var(--rose); }
-.tl-item.current::before { border-color: var(--gold); background: var(--gold); }
-
-.tl-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.tl-years {
-  font-size: 0.68rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.25rem;
-}
-
-.tl-company {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-
-.tl-role {
-  font-size: 0.8rem;
-  color: var(--mid);
-}
-
-.tl-badge {
-  font-size: 0.6rem;
-  padding: 0.18rem 0.5rem;
-  border-radius: 4px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.badge-startup { background: rgba(225,29,72,0.15); color: #fda4af; border: 1px solid rgba(225,29,72,0.3); }
-.badge-current { background: rgba(242,169,0,0.15); color: #fcd34d; border: 1px solid rgba(242,169,0,0.3); }
-
-/* ── ROLES GRID ── */
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.role-card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.02);
-  transition: all 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-
-.role-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  opacity: 0;
-  transition: opacity 0.25s;
-}
-
-.role-card:hover { background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.3); }
-.role-card:hover::after { opacity: 1; }
-
-.rc-0::after { background: var(--blue); }
-.rc-1::after { background: var(--teal); }
-.rc-2::after { background: var(--gold); }
-.rc-3::after { background: var(--rose); }
-.rc-4::after { background: var(--mint); }
-.rc-5::after { background: #8b5cf6; }
-
-.role-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 0.92rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  line-height: 1.3;
-}
-
-.stars { color: var(--gold); font-size: 0.72rem; margin-bottom: 0.5rem; }
-
-.role-desc { font-size: 0.75rem; color: var(--mid); line-height: 1.5; }
-
-/* ── DIFFERENTIATORS ── */
-.diff-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.diff-card {
-  padding: 1.4rem;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.07);
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  transition: all 0.25s;
-}
-
-.diff-card:hover { background: rgba(37,99,235,0.07); border-color: rgba(37,99,235,0.25); }
-
-.diff-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.diff-title { font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; }
-.diff-text { font-size: 0.75rem; color: var(--mid); line-height: 1.5; }
-
-/* ── CONTACT STRIP ── */
-.contact-strip {
-  background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(13,148,136,0.08));
-  border: 1px solid rgba(37,99,235,0.2);
-  border-radius: 16px;
-  padding: 3rem 2rem;
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto 4rem;
-}
-
-.contact-strip h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-strip p { color: var(--mid); font-size: 0.9rem; margin-bottom: 1.5rem; }
-
-.contact-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.clink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.3rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.clink-primary { background: var(--blue); color: white; }
-.clink-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
-.clink-secondary { background: rgba(255,255,255,0.07); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1); }
-.clink-secondary:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
-
-/* ── NAV DOTS ── */
-.nav-dots {
-  position: fixed;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  z-index: 100;
-}
-
-.dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  cursor: pointer;
-  transition: all 0.3s;
-  border: 1px solid rgba(255,255,255,0.25);
-}
-
-.dot.active, .dot:hover { background: var(--gold); transform: scale(1.5); }
-
-/* ── MODAL ── */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(8px);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.modal-overlay.open { display: flex; }
-
-.modal {
-  background: #0d2040;
-  border: 1px solid rgba(37,99,235,0.3);
-  border-radius: 20px;
-  padding: 2.5rem;
-  max-width: 560px;
-  width: 100%;
-  position: relative;
-  animation: fadeUp 0.3s both;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem; right: 1rem;
-  background: rgba(255,255,255,0.1);
-  border: none; color: white;
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s;
-}
-
-.modal-close:hover { background: rgba(255,255,255,0.2); }
-
-.modal h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-  padding-right: 2rem;
-}
-
-.modal-badge {
-  font-size: 0.68rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
-.modal-body { font-size: 0.84rem; color: var(--mid); line-height: 1.7; }
-.modal-body p { margin-bottom: 0.8rem; }
-
-.modal-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1rem;
-}
-
-.modal-tag {
-  font-size: 0.7rem;
-  padding: 0.22rem 0.6rem;
-  border-radius: 6px;
-  background: rgba(37,99,235,0.15);
-  color: #93c5fd;
-  border: 1px solid rgba(37,99,235,0.25);
-}
-
-/* ── REVEAL ── */
-.reveal {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.animate-hidden { opacity: 0; transform: translateY(28px); }
-.reveal.animate-hidden.visible { opacity: 1; transform: translateY(0); }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes bob {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
-  50% { transform: translateX(-50%) translateY(8px); opacity: 0.3; }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  .domains-grid, .roles-grid, .diff-grid { grid-template-columns: 1fr; }
-  .stats-bar { flex-direction: row; }
-  .stat { padding: 0.8rem 1rem; flex: 1; }
-  .nav-dots { display: none; }
-  section { padding: 3rem 1.2rem; }
-}
-
-@media (max-width: 600px) {
-  .stats-bar { flex-wrap: wrap; }
-  .stat { flex: 0 0 50%; }
-}
+  --navy:#0f1f45;--blue:#2563eb;--gold:#f2a900;--teal:#0d9488;
+  --rose:#e11d48;--mint:#10b981;--white:#ffffff;--muted:#64748b;
+  --mid:#94a3b8;--dark:#1a1a1a;--light:#eff6ff;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem 6rem;position:relative;background:radial-gradient(ellipse 80% 60% at 20% 40%,rgba(37,99,235,0.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 70%,rgba(242,169,0,0.1) 0%,transparent 55%),#0f1f45}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.05) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:860px}
+.hero-tag{display:inline-block;background:rgba(37,99,235,0.2);border:1px solid rgba(37,99,235,0.4);color:#93c5fd;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:100px;margin-bottom:1.5rem;animation:fadeUp 0.6s 0.2s both}
+h1.name{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,8vw,6rem);font-weight:900;line-height:1.0;letter-spacing:-0.02em;margin-bottom:0.6rem;animation:fadeUp 0.7s 0.4s both}
+h1.name span{color:var(--gold)}
+.hero-sub{font-size:clamp(0.9rem,2vw,1.1rem);color:#93c5fd;margin-bottom:1.2rem;animation:fadeUp 0.7s 0.55s both}
+.creds{margin-bottom:2.5rem;animation:fadeUp 0.7s 0.7s both;display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center}
+.cred{font-size:0.72rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:0.2rem 0.65rem;border-radius:4px;color:#cbd5e1;letter-spacing:0.03em}
+.stats-bar{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:2rem;animation:fadeUp 0.7s 0.85s both;border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden}
+.stat{padding:1rem 2rem;border-right:1px solid rgba(255,255,255,0.08);text-align:center;background:rgba(255,255,255,0.03)}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;font-weight:700;color:var(--gold);display:block;line-height:1}
+.stat-label{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.3rem}
+.contact-row{font-size:0.85rem;color:var(--muted);animation:fadeUp 0.7s 1s both}
+.contact-row a{color:#93c5fd;text-decoration:none}
+.contact-row a:hover{color:var(--gold)}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.4rem;animation:fadeUp 0.7s 1.4s both}
+.scroll-hint span{font-size:0.62rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase}
+.scroll-arrow{width:20px;height:32px;border:2px solid rgba(255,255,255,0.2);border-radius:10px;position:relative}
+.scroll-arrow::after{content:'';position:absolute;top:5px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--muted);border-radius:2px;animation:bob 1.5s infinite}
+.divider{height:1px;background:linear-gradient(to right,transparent,rgba(37,99,235,0.25),transparent);max-width:1100px;margin:0 auto}
+section{display:block;padding:5rem 2rem;max-width:1100px;margin:0 auto}
+.section-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.6rem}
+.section-label::after{content:'';width:30px;height:1px;background:var(--gold);opacity:0.5}
+.section-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:2.5rem;line-height:1.1}
+.domains-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border-radius:16px;overflow:hidden}
+.domain-card{background:rgba(15,31,69,0.95);padding:1.8rem;cursor:pointer;transition:background 0.3s,transform 0.3s;position:relative}
+.domain-card:hover{background:rgba(37,99,235,0.12);transform:scale(1.02);z-index:2}
+.domain-icon{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.55rem;border-radius:4px;display:inline-block;margin-bottom:0.8rem}
+.di-0{background:rgba(37,99,235,0.2);color:#93c5fd;border:1px solid rgba(37,99,235,0.3)}
+.di-1{background:rgba(13,148,136,0.2);color:#5eead4;border:1px solid rgba(13,148,136,0.3)}
+.di-2{background:rgba(242,169,0,0.2);color:#fcd34d;border:1px solid rgba(242,169,0,0.3)}
+.di-3{background:rgba(225,29,72,0.2);color:#fda4af;border:1px solid rgba(225,29,72,0.3)}
+.di-4{background:rgba(16,185,129,0.2);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3)}
+.di-5{background:rgba(139,92,246,0.2);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3)}
+.domain-title{font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem;line-height:1.2}
+.domain-desc{font-size:0.78rem;color:var(--mid);line-height:1.6}
+.domain-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.8rem}
+.tag{font-size:0.62rem;padding:0.15rem 0.45rem;border-radius:100px;background:rgba(255,255,255,0.05);color:var(--mid);border:1px solid rgba(255,255,255,0.08)}
+.click-hint{font-size:0.65rem;color:rgba(147,197,253,0.5);margin-top:0.8rem}
+.timeline{position:relative;padding-left:2.2rem}
+.timeline::before{content:'';position:absolute;left:0.45rem;top:0.8rem;bottom:0.8rem;width:2px;background:linear-gradient(to bottom,var(--blue),var(--teal),var(--gold))}
+.tl-item{position:relative;margin-bottom:1.2rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;transition:all 0.25s}
+.tl-item:hover{background:rgba(37,99,235,0.08);border-color:rgba(37,99,235,0.3);transform:translateX(6px)}
+.tl-item::before{content:'';position:absolute;left:-1.95rem;top:1.5rem;width:12px;height:12px;border-radius:50%;border:2px solid var(--blue);background:var(--navy)}
+.tl-item.startup::before{border-color:var(--rose)}
+.tl-item.current::before{border-color:var(--gold);background:var(--gold)}
+.tl-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.tl-years{font-size:0.68rem;color:var(--muted);letter-spacing:0.04em;margin-bottom:0.25rem}
+.tl-company{font-weight:600;font-size:1rem;margin-bottom:0.2rem}
+.tl-role{font-size:0.8rem;color:var(--mid)}
+.tl-badge{font-size:0.6rem;padding:0.18rem 0.5rem;border-radius:4px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.badge-startup{background:rgba(225,29,72,0.15);color:#fda4af;border:1px solid rgba(225,29,72,0.3)}
+.badge-current{background:rgba(242,169,0,0.15);color:#fcd34d;border:1px solid rgba(242,169,0,0.3)}
+.roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:3rem}
+.role-card{padding:1.5rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);transition:all 0.25s;position:relative;overflow:hidden}
+.role-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;opacity:0;transition:opacity 0.25s}
+.role-card:hover{background:rgba(37,99,235,0.08);border-color:rgba(37,99,235,0.3)}
+.role-card:hover::after{opacity:1}
+.rc-0::after{background:var(--blue)}.rc-1::after{background:var(--teal)}.rc-2::after{background:var(--gold)}
+.rc-3::after{background:var(--rose)}.rc-4::after{background:var(--mint)}.rc-5::after{background:#8b5cf6}
+.role-title{font-family:'Playfair Display',Georgia,serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;line-height:1.3}
+.stars{color:var(--gold);font-size:0.72rem;margin-bottom:0.5rem}
+.role-desc{font-size:0.75rem;color:var(--mid);line-height:1.5}
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.diff-card{padding:1.4rem;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);display:flex;gap:1rem;align-items:flex-start;transition:all 0.25s}
+.diff-card:hover{background:rgba(37,99,235,0.07);border-color:rgba(37,99,235,0.25)}
+.diff-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.diff-title{font-weight:600;font-size:0.88rem;margin-bottom:0.3rem}
+.diff-text{font-size:0.75rem;color:var(--mid);line-height:1.5}
+.contact-strip{background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(13,148,136,0.08));border:1px solid rgba(37,99,235,0.2);border-radius:16px;padding:3rem 2rem;text-align:center;max-width:1100px;margin:0 auto 4rem}
+.contact-strip h3{font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;margin-bottom:0.5rem}
+.contact-strip p{color:var(--mid);font-size:0.9rem;margin-bottom:1.5rem}
+.contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.clink{display:inline-flex;align-items:center;gap:0.5rem;padding:0.65rem 1.3rem;border-radius:8px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:all 0.2s}
+.clink-primary{background:var(--blue);color:white}
+.clink-primary:hover{background:#1d4ed8;transform:translateY(-2px)}
+.clink-secondary{background:rgba(255,255,255,0.07);color:#cbd5e1;border:1px solid rgba(255,255,255,0.1)}
+.clink-secondary:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+.nav-dots{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0.6rem;z-index:100}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all 0.3s;border:1px solid rgba(255,255,255,0.25)}
+.dot.active,.dot:hover{background:var(--gold);transform:scale(1.5)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:2rem}
+.modal-overlay.open{display:flex}
+.modal{background:#0d2040;border:1px solid rgba(37,99,235,0.3);border-radius:20px;padding:2.5rem;max-width:560px;width:100%;position:relative;animation:fadeUp 0.3s both;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.1);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.modal-close:hover{background:rgba(255,255,255,0.2)}
+.modal h3{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;margin-bottom:0.3rem;padding-right:2rem}
+.modal-badge{font-size:0.68rem;padding:0.2rem 0.6rem;border-radius:4px;display:inline-block;margin-bottom:1rem;font-weight:600;letter-spacing:0.08em}
+.modal-body{font-size:0.84rem;color:var(--mid);line-height:1.7}
+.modal-body p{margin-bottom:0.8rem}
+.modal-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.modal-tag{font-size:0.7rem;padding:0.22rem 0.6rem;border-radius:6px;background:rgba(37,99,235,0.15);color:#93c5fd;border:1px solid rgba(37,99,235,0.25)}
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.animate-hidden{opacity:0;transform:translateY(28px)}
+.reveal.animate-hidden.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(8px);opacity:0.3}}
+@media(max-width:768px){.domains-grid,.roles-grid,.diff-grid{grid-template-columns:1fr}.stats-bar{flex-direction:row}.stat{padding:0.8rem 1rem;flex:1}.nav-dots{display:none}section{padding:3rem 1.2rem}}
+@media(max-width:600px){.stats-bar{flex-wrap:wrap}.stat{flex:0 0 50%}}
 </style>
 </head>
 <body>
 
-<!-- NAV DOTS -->
-<nav class="nav-dots" id="navDots">
+<nav class="nav-dots">
   <div class="dot active" data-target="sec0" title="Home"></div>
   <div class="dot" data-target="sec1" title="Expertise"></div>
   <div class="dot" data-target="sec2" title="Career"></div>
@@ -669,12 +127,11 @@ section {
   <div class="dot" data-target="sec4" title="Contact"></div>
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
 <div class="hero" id="sec0">
   <div class="hero-inner">
-    <div class="hero-tag">Global IT &amp; AI Transformation Leader &nbsp;·&nbsp; AI-first Operations at Scale</div>
+    <div class="hero-tag">Global IT &amp; AI Transformation Leader &nbsp;&middot;&nbsp; AI-first Operations at Scale</div>
     <h1 class="name">Harish <span>Vasista</span></h1>
-    <p class="hero-sub">Head of IT Global Support, Reporting &amp; Analytics &nbsp;·&nbsp; Nokia Networks</p>
+    <p class="hero-sub">Head of IT Global Support, Reporting &amp; Analytics &nbsp;&middot;&nbsp; Nokia Networks</p>
     <div class="creds">
       <span class="cred">BE</span><span class="cred">PhD</span><span class="cred">PgMP</span>
       <span class="cred">PMP</span><span class="cred">CSM</span><span class="cred">CSPO</span>
@@ -687,9 +144,9 @@ section {
       <div class="stat"><span class="stat-num">20%+</span><span class="stat-label">YoY Cost Optimisation</span></div>
     </div>
     <div class="contact-row">
-      Bangalore, India &nbsp;·&nbsp;
-      <a href="mailto:harishnv@gmail.com">harishnv@gmail.com</a> &nbsp;·&nbsp;
-      <a href="https://www.linkedin.com/in/harishnv/" target="_blank" rel="noopener">linkedin.com/in/harishnv</a> &nbsp;·&nbsp;
+      Bangalore, India &nbsp;&middot;&nbsp;
+      <a href="mailto:harishnv@gmail.com">harishnv@gmail.com</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/harishnv/" target="_blank" rel="noopener">linkedin.com/in/harishnv</a> &nbsp;&middot;&nbsp;
       +91 72591 00388
     </div>
   </div>
@@ -701,7 +158,6 @@ section {
 
 <div class="divider"></div>
 
-<!-- ═══════════════ DOMAINS ═══════════════ -->
 <section id="sec1">
   <div class="reveal">
     <p class="section-label">Core Expertise</p>
@@ -711,62 +167,50 @@ section {
 
     <div class="domain-card" onclick="openModal('itops')">
       <span class="domain-icon di-0">IT OPS</span>
-      <div class="domain-title">IT Operations &amp;<br>Service Management</div>
-      <div class="domain-desc">Global 24×7 support across Americas, EMEA, APAC and China. Critical Incident Management, PowerBI dashboards, IT ops &amp; contractual reporting, SLA/KPI governance with external vendors.</div>
-      <div class="domain-tags">
-        <span class="tag">ITIL</span><span class="tag">ITSM</span><span class="tag">PowerBI</span><span class="tag">SLA/KPI</span><span class="tag">Critical Incident</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-title">IT Operations &amp; Service Management</div>
+      <div class="domain-desc">Global 24x7 support across Americas, EMEA, APAC and China. Critical Incident Management, PowerBI dashboards, IT ops &amp; contractual reporting, SLA/KPI governance with external vendors.</div>
+      <div class="domain-tags"><span class="tag">ITIL</span><span class="tag">ITSM</span><span class="tag">PowerBI</span><span class="tag">SLA/KPI</span><span class="tag">Critical Incident</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
     <div class="domain-card" onclick="openModal('ai')">
       <span class="domain-icon di-1">AI</span>
-      <div class="domain-title">AI &amp; Intelligent<br>Automation</div>
-      <div class="domain-desc">Technology and AI-savvy leader with hands-on experience designing and running AI-first, AI-augmented processes and operations at enterprise scale — deploying ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks in production.</div>
-      <div class="domain-tags">
-        <span class="tag">Now Assist</span><span class="tag">Vertex AI</span><span class="tag">Azure OpenAI</span><span class="tag">Agentic AI</span><span class="tag">AI-first Operations</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-title">AI &amp; Intelligent Automation</div>
+      <div class="domain-desc">Technology and AI-savvy leader with hands-on experience designing and running AI-first, AI-augmented processes and operations at enterprise scale &mdash; deploying ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks in production.</div>
+      <div class="domain-tags"><span class="tag">Now Assist</span><span class="tag">Vertex AI</span><span class="tag">Azure OpenAI</span><span class="tag">Agentic AI</span><span class="tag">AI-first Operations</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
     <div class="domain-card" onclick="openModal('pmo')">
       <span class="domain-icon di-2">PMO</span>
-      <div class="domain-title">Program &amp;<br>Portfolio Management</div>
+      <div class="domain-title">Program &amp; Portfolio Management</div>
       <div class="domain-desc">End-to-end NPI ownership: HW design, vendor selection, prototyping, budget, dev &amp; test, marketing, GTM. Product lifecycle process design. PMO COE establishment.</div>
-      <div class="domain-tags">
-        <span class="tag">PgMP</span><span class="tag">PMP</span><span class="tag">PhD Ops</span><span class="tag">PMO COE</span><span class="tag">NPI</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-tags"><span class="tag">PgMP</span><span class="tag">PMP</span><span class="tag">PhD Ops</span><span class="tag">PMO COE</span><span class="tag">NPI</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
     <div class="domain-card" onclick="openModal('trans')">
       <span class="domain-icon di-3">TRANS</span>
-      <div class="domain-title">Enterprise Technology<br>Transformation</div>
+      <div class="domain-title">Enterprise Technology Transformation</div>
       <div class="domain-desc">Agile transformation (50%+ efficiency gain). Nokia.com website modernisation. ServiceNow AI-augmentation. Reactive-to-predictive IT operations transformation.</div>
-      <div class="domain-tags">
-        <span class="tag">Agile</span><span class="tag">Nokia.com</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-tags"><span class="tag">Agile</span><span class="tag">Nokia.com</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
     <div class="domain-card" onclick="openModal('team')">
       <span class="domain-icon di-4">TEAM</span>
-      <div class="domain-title">Global Team &amp;<br>Delivery Leadership</div>
+      <div class="domain-title">Global Team &amp; Delivery Leadership</div>
       <div class="domain-desc">600+ FTE global teams (employees and subcontractors) across a follow-the-sun model covering Americas, EMEA, APAC, and China. Built L3/L4 TEC from scratch with 40%+ cost savings. Multi-vendor ecosystem governance.</div>
-      <div class="domain-tags">
-        <span class="tag">600+ FTE</span><span class="tag">Americas</span><span class="tag">EMEA</span><span class="tag">APAC</span><span class="tag">China</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-tags"><span class="tag">600+ FTE</span><span class="tag">Americas</span><span class="tag">EMEA</span><span class="tag">APAC</span><span class="tag">China</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
     <div class="domain-card" onclick="openModal('telco')">
       <span class="domain-icon di-5">TELCO</span>
-      <div class="domain-title">Telecom &amp; Networking<br>Domain</div>
+      <div class="domain-title">Telecom &amp; Networking Domain</div>
       <div class="domain-desc">27-year telecom career: Nokia, Alcatel-Lucent, AT&amp;T &amp; Verizon direct ownership, L2/L3 networking, FTTH, IP routing, and Riverstone Networks startup.</div>
-      <div class="domain-tags">
-        <span class="tag">Nokia</span><span class="tag">Alcatel-Lucent</span><span class="tag">AT&amp;T &amp; Verizon</span><span class="tag">FTTH</span>
-      </div>
-      <div class="click-hint">▸ Click to expand</div>
+      <div class="domain-tags"><span class="tag">Nokia</span><span class="tag">Alcatel-Lucent</span><span class="tag">AT&amp;T &amp; Verizon</span><span class="tag">FTTH</span></div>
+      <div class="click-hint">&#9658; Click to expand</div>
     </div>
 
   </div>
@@ -774,7 +218,6 @@ section {
 
 <div class="divider"></div>
 
-<!-- ═══════════════ TIMELINE ═══════════════ -->
 <section id="sec2">
   <div class="reveal">
     <p class="section-label">Career Journey</p>
@@ -785,9 +228,9 @@ section {
     <div class="tl-item current">
       <div class="tl-header">
         <div>
-          <div class="tl-years">Mar 2022 – Present</div>
+          <div class="tl-years">Mar 2022 &ndash; Present</div>
           <div class="tl-company">Nokia Networks</div>
-          <div class="tl-role">Head of IT Global Support, Reporting &amp; Analytics · Acting Head of ITSM &amp; Ecosystem Enablement</div>
+          <div class="tl-role">Head of IT Global Support, Reporting &amp; Analytics</div>
         </div>
         <span class="tl-badge badge-current">Current</span>
       </div>
@@ -796,9 +239,9 @@ section {
     <div class="tl-item">
       <div class="tl-header">
         <div>
-          <div class="tl-years">Jul 2015 – Mar 2022</div>
+          <div class="tl-years">Jul 2015 &ndash; Mar 2022</div>
           <div class="tl-company">Extreme Networks <span style="color:var(--muted);font-weight:400;font-size:0.8rem">(via Avaya acquisition)</span></div>
-          <div class="tl-role">Senior Program Manager — Cloud &amp; Applications</div>
+          <div class="tl-role">Senior Program Manager &mdash; Cloud &amp; Applications</div>
         </div>
       </div>
     </div>
@@ -806,9 +249,9 @@ section {
     <div class="tl-item">
       <div class="tl-header">
         <div>
-          <div class="tl-years">Apr 2006 – Apr 2015</div>
+          <div class="tl-years">Apr 2006 &ndash; Apr 2015</div>
           <div class="tl-company">Alcatel-Lucent India Limited</div>
-          <div class="tl-role">Principal PM · Leader Agile Advocacy · Global Support Manager</div>
+          <div class="tl-role">Principal PM &middot; Leader Agile Advocacy &middot; Global Support Manager</div>
         </div>
       </div>
     </div>
@@ -816,9 +259,9 @@ section {
     <div class="tl-item startup">
       <div class="tl-header">
         <div>
-          <div class="tl-years">Jun 2004 – Apr 2006</div>
+          <div class="tl-years">Jun 2004 &ndash; Apr 2006</div>
           <div class="tl-company">Riverstone Networks</div>
-          <div class="tl-role">Engineering Escalation Manager · Startup acquired by Alcatel-Lucent</div>
+          <div class="tl-role">Engineering Escalation Manager &middot; Startup acquired by Alcatel-Lucent</div>
         </div>
         <span class="tl-badge badge-startup">Startup</span>
       </div>
@@ -827,9 +270,9 @@ section {
     <div class="tl-item">
       <div class="tl-header">
         <div>
-          <div class="tl-years">Nov 1997 – Jun 2004</div>
+          <div class="tl-years">Nov 1997 &ndash; Jun 2004</div>
           <div class="tl-company">Infosys Technologies</div>
-          <div class="tl-role">Lead Developer — Nortel Networks Account</div>
+          <div class="tl-role">Lead Developer &mdash; Nortel Networks Account</div>
         </div>
       </div>
     </div>
@@ -839,44 +282,43 @@ section {
 
 <div class="divider"></div>
 
-<!-- ═══════════════ TARGET ROLES ═══════════════ -->
 <section id="sec3">
   <div class="reveal">
     <p class="section-label">Target Roles</p>
     <h2 class="section-title">Where I Create the Most Impact</h2>
-    <p style="color:var(--mid);font-size:0.88rem;margin-top:-1.5rem;margin-bottom:2rem;">CXO · SVP · VP · Senior Director — global IT, AI transformation, program management &amp; support leadership</p>
+    <p style="color:var(--mid);font-size:0.88rem;margin-top:-1.5rem;margin-bottom:2rem;">CXO &middot; SVP &middot; VP &middot; Senior Director &mdash; global IT, AI transformation, program management &amp; support leadership</p>
   </div>
 
   <div class="roles-grid reveal">
     <div class="role-card rc-0">
-      <div class="role-title">Head / VP — IT Operations &amp; Global Support</div>
-      <div class="stars">★★★★★ Core Fit</div>
-      <div class="role-desc">24×7 global IT ops, ITSM, critical incident management, SLA governance across Americas, EMEA, APAC &amp; China from India.</div>
+      <div class="role-title">Head / VP &mdash; IT Operations &amp; Global Support</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; Core Fit</div>
+      <div class="role-desc">24x7 global IT ops, ITSM, critical incident management, SLA governance across Americas, EMEA, APAC &amp; China from India.</div>
     </div>
     <div class="role-card rc-1">
       <div class="role-title">AI Transformation Strategist / Director</div>
-      <div class="stars">★★★★★ Core Fit</div>
-      <div class="role-desc">Live AI programme at Nokia: Now Assist, Vertex AI, Azure OpenAI. Overhauling ITSM processes to be AI-first &amp; future-proof.</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; Core Fit</div>
+      <div class="role-desc">Live AI programme: Now Assist, Vertex AI, Azure OpenAI. Overhauling ITSM processes to be AI-first &amp; future-proof.</div>
     </div>
     <div class="role-card rc-2">
       <div class="role-title">Senior Program / PMO Director</div>
-      <div class="stars">★★★★★ Core Fit</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; Core Fit</div>
       <div class="role-desc">PgMP + PMP + PhD in Operations. Multi-million $ program delivery. PMO COE built from scratch at Alcatel-Lucent.</div>
     </div>
     <div class="role-card rc-3">
-      <div class="role-title">Director — Customer Delivery &amp; Outcomes</div>
-      <div class="stars">★★★★★ Core Fit</div>
+      <div class="role-title">Director &mdash; Customer Delivery &amp; Outcomes</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; Core Fit</div>
       <div class="role-desc">Built global L3/L4 TEC at Alcatel-Lucent. AT&amp;T &amp; Verizon direct client ownership. Startup DNA via Riverstone Networks.</div>
     </div>
     <div class="role-card rc-4">
       <div class="role-title">Chief of Staff / Strategy &amp; Operations Director</div>
-      <div class="stars">★★★★★ Core Fit</div>
-      <div class="role-desc">Strategic execution partner for Nokia senior leadership. Operating rhythm, executive enablement, AOP alignment, AI transformation.</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; Core Fit</div>
+      <div class="role-desc">Strategic execution partner for senior leadership. Operating rhythm, executive enablement, AOP alignment, AI transformation.</div>
     </div>
     <div class="role-card rc-5">
-      <div class="role-title">Senior Program Director — Telecom</div>
-      <div class="stars">★★★★½ Strong</div>
-      <div class="role-desc">27-year telecom career: Nokia, Alcatel-Lucent, Extreme Networks. Deep Nokia ecosystem knowledge &amp; Tier-1 operator relationships.</div>
+      <div class="role-title">Senior Program Director &mdash; Telecom</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#189; Strong</div>
+      <div class="role-desc">27-year telecom career: Nokia, Alcatel-Lucent, Extreme Networks. Deep Nokia knowledge &amp; Tier-1 operator relationships.</div>
     </div>
   </div>
 
@@ -885,31 +327,31 @@ section {
   </div>
   <div class="diff-grid reveal">
     <div class="diff-card">
-      <div class="diff-icon" style="background:rgba(37,99,235,0.15);">🤖</div>
+      <div class="diff-icon" style="background:rgba(37,99,235,0.15)">&#129302;</div>
       <div>
-        <div class="diff-title">Hands-on AI & Technology Fluency</div>
-        <div class="diff-text">Personally hands-on with ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks — designing and running AI-first, AI-augmented processes and operations at enterprise scale. Live in production, not theoretical.</div>
+        <div class="diff-title">Hands-on AI &amp; Technology Fluency</div>
+        <div class="diff-text">Personally hands-on with ServiceNow Now Assist, Google Vertex AI, Azure OpenAI, and agentic AI frameworks &mdash; designing and running AI-first, AI-augmented processes and operations at enterprise scale. Live in production, not theoretical.</div>
       </div>
     </div>
     <div class="diff-card">
-      <div class="diff-icon" style="background:rgba(13,148,136,0.15);">🌍</div>
+      <div class="diff-icon" style="background:rgba(13,148,136,0.15)">&#127757;</div>
       <div>
         <div class="diff-title">Global Scope from India</div>
-        <div class="diff-text">Supporting Nokia's worldwide workforce from Bangalore — Americas, EMEA, APAC, and China. Full follow-the-sun 24×7 operational accountability.</div>
+        <div class="diff-text">Supporting Nokia's worldwide workforce from Bangalore &mdash; Americas, EMEA, APAC, and China. Full follow-the-sun 24x7 operational accountability.</div>
       </div>
     </div>
     <div class="diff-card">
-      <div class="diff-icon" style="background:rgba(242,169,0,0.15);">🎓</div>
+      <div class="diff-icon" style="background:rgba(242,169,0,0.15)">&#127891;</div>
       <div>
         <div class="diff-title">PgMP + PMP + PhD</div>
-        <div class="diff-text">A rare combination — Program Management Professional, Project Management Professional, and a PhD in Operations. The strongest credential set for senior program leadership.</div>
+        <div class="diff-text">A rare combination &mdash; Program Management Professional, Project Management Professional, and a PhD in Operations. The strongest credential set for senior program leadership.</div>
       </div>
     </div>
     <div class="diff-card">
-      <div class="diff-icon" style="background:rgba(225,29,72,0.15);">🚀</div>
+      <div class="diff-icon" style="background:rgba(225,29,72,0.15)">&#128640;</div>
       <div>
         <div class="diff-title">Startup DNA</div>
-        <div class="diff-text">Engineering Escalation Manager at Riverstone Networks — a high-growth networking startup acquired by Alcatel-Lucent. Built accountability structures from scratch under startup conditions.</div>
+        <div class="diff-text">Engineering Escalation Manager at Riverstone Networks &mdash; a high-growth networking startup acquired by Alcatel-Lucent. Built accountability structures from scratch under startup conditions.</div>
       </div>
     </div>
   </div>
@@ -917,98 +359,100 @@ section {
 
 <div class="divider"></div>
 
-<!-- ═══════════════ CONTACT ═══════════════ -->
 <div class="contact-strip" id="sec4">
   <h3>Let's Connect</h3>
-  <p>Exploring senior leadership opportunities at VP, SVP, or CXO level — globally</p>
+  <p>Exploring senior leadership opportunities at VP, SVP, or CXO level &mdash; globally</p>
   <div class="contact-links">
     <a href="https://www.linkedin.com/in/harishnv/" target="_blank" rel="noopener" class="clink clink-primary">
       <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn Profile
     </a>
-    <a href="mailto:harishnv@gmail.com" class="clink clink-secondary">✉️ harishnv@gmail.com</a>
-    <a href="tel:+917259100388" class="clink clink-secondary">📞 +91 72591 00388</a>
+    <a href="mailto:harishnv@gmail.com" class="clink clink-secondary">&#9993; harishnv@gmail.com</a>
+    <a href="tel:+917259100388" class="clink clink-secondary">&#128222; +91 72591 00388</a>
   </div>
 </div>
 
-<!-- ═══════════════ MODAL ═══════════════ -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" id="modalBox">
-    <button class="modal-close" id="modalClose">✕</button>
+    <button class="modal-close" id="modalClose">&#10005;</button>
     <div id="modalBody"></div>
   </div>
 </div>
 
 <script>
-// ── MODAL DATA ──
-const modals = {
+var modals = {
   itops: {
-    badge: { text:'IT OPS', bg:'rgba(37,99,235,0.2)', color:'#93c5fd' },
+    badge: {text:'IT OPS',bg:'rgba(37,99,235,0.2)',color:'#93c5fd'},
     title: 'IT Operations & Service Management',
     paras: [
-      'At Nokia, leads the global 24×7 Client Service Management organisation — owning end-to-end IT application, infrastructure, cloud, and end-user support for Nokia\'s worldwide workforce across Americas, EMEA, APAC, and China.',
+      'Leads global 24x7 Client Service Management organisation owning end-to-end IT application, infrastructure, cloud, and end-user support across Americas, EMEA, APAC, and China.',
       'Direct accountability for Critical Incident Management, SLA compliance, change management, and service request fulfilment. Built PowerBI executive dashboards and KPI governance frameworks for IT ops and contractual reporting. Delivered 20%+ YoY cost optimisation over multiple consecutive years.'
     ],
-    tags:['Global 24×7 Support','ITIL Incident/Problem/Change','Critical Incident Mgmt','PowerBI Dashboards','IT Ops & Contractual Reporting','SLA/KPI Governance with External Vendors','Multi-vendor Ecosystem','ISO27001 & SOX Compliance']
+    tags:['Global 24x7 Support','ITIL Incident/Problem/Change','Critical Incident Mgmt','PowerBI Dashboards','IT Ops & Contractual Reporting','SLA/KPI Governance','Multi-vendor Ecosystem','ISO27001 & SOX Compliance']
   },
   ai: {
-    badge: { text:'AI', bg:'rgba(13,148,136,0.2)', color:'#5eead4' },
+    badge: {text:'AI',bg:'rgba(13,148,136,0.2)',color:'#5eead4'},
     title: 'AI & Intelligent Automation',
     paras: [
-      'Technology and AI-savvy leader with hands-on experience designing, deploying, and scaling AI-first and AI-augmented processes and operations across enterprise environments. Leads live AI programme deployments using ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI — overhauling enterprise IT and operational processes end-to-end, making them AI-first, future-proof, and aligned with corporate strategy.',
-      'Personally hands-on with agentic AI platforms, intelligent automation frameworks, and Unix scripting — bridging the gap between AI strategy and enterprise execution with direct technical credibility. A deep believer in AI Skill Developers as the next critical organisational capability: standardising AI outputs, ensuring consistent delivery across teams and geographies, and building the governance layer that makes enterprise AI scale reliably.'
+      'Technology and AI-savvy leader with hands-on experience designing, deploying, and scaling AI-first and AI-augmented processes and operations across enterprise environments. Leads live AI programme deployments using ServiceNow Now Assist, Google Vertex AI, and Azure OpenAI.',
+      'Personally hands-on with agentic AI platforms, intelligent automation frameworks, and Unix scripting. Deep believer in AI Skill Developers as the next critical organisational capability: standardising AI outputs, ensuring consistent delivery across teams and geographies, and building the governance layer that makes enterprise AI scale reliably.'
     ],
-    tags:['ServiceNow Now Assist','Google Vertex AI','Azure OpenAI','Agentic AI Platforms','Unix Scripting','PowerApps Automation','AI-first Process Design','AI-augmented Operations at Scale','AI Skill Developer Concept','Intelligent Automation','Enterprise AI Governance']
+    tags:['ServiceNow Now Assist','Google Vertex AI','Azure OpenAI','Agentic AI Platforms','Unix Scripting','PowerApps Automation','AI-first Process Design','AI-augmented Operations at Scale','AI Skill Developer Concept','Enterprise AI Governance']
   },
   pmo: {
-    badge: { text:'PMO', bg:'rgba(242,169,0,0.2)', color:'#fcd34d' },
+    badge: {text:'PMO',bg:'rgba(242,169,0,0.2)',color:'#fcd34d'},
     title: 'Program & Portfolio Management',
     paras: [
       'End-to-end NPI program ownership covering the full product lifecycle: requirements gathering, hardware design and vendor selection, prototyping, budget management, development and test planning, marketing, documentation, and go-to-market strategy.',
-      'Established PMO COE capabilities and product lifecycle process design frameworks. Led multi-million dollar cross-functional programs at Extreme Networks spanning Engineering, Supply Chain, PLM, Finance, Legal, and Sales — with full P&L accountability from inception through go-live.'
+      'Established PMO COE capabilities and product lifecycle process design frameworks. Led multi-million dollar cross-functional programs at Extreme Networks spanning Engineering, Supply Chain, PLM, Finance, Legal, and Sales with full accountability from inception through go-live.'
     ],
-    tags:['PgMP Certified','PMP Certified','PhD in Operations','End-to-end NPI Ownership','HW Design & Vendor Selection','Prototyping','Budget Management','GTM Strategy','PMO COE Establishment','Product Lifecycle Process Design','Risk & Dependency Governance']
+    tags:['PgMP Certified','PMP Certified','PhD in Operations','End-to-end NPI Ownership','HW Design & Vendor Selection','Budget Management','GTM Strategy','PMO COE Establishment','Risk & Dependency Governance']
   },
   trans: {
-    badge: { text:'TRANS', bg:'rgba(225,29,72,0.2)', color:'#fda4af' },
+    badge: {text:'TRANS',bg:'rgba(225,29,72,0.2)',color:'#fda4af'},
     title: 'Enterprise Technology Transformation',
     paras: [
-      'Led Alcatel-Lucent India R&D\'s full transition from Waterfall to Agile — improving engineering efficiency by 50%+ and feature delivery rate by 70%. Designed Agile Measurement Index and standardised adoption metrics across all product groups.',
-      'Owns Nokia.com corporate website infrastructure maintenance and development. Led Nokia\'s shift from reactive, ticket-centric IT operations to proactive, analytics-driven service delivery using ServiceNow, PowerBI, and AI augmentation.'
+      'Led Alcatel-Lucent India R&D full transition from Waterfall to Agile - improving engineering efficiency by 50%+ and feature delivery rate by 70%. Designed Agile Measurement Index and standardised adoption metrics across all product groups.',
+      'Owns Nokia.com corporate website infrastructure maintenance and development. Led the shift from reactive, ticket-centric IT operations to proactive, analytics-driven service delivery using ServiceNow, PowerBI, and AI augmentation.'
     ],
-    tags:['Agile Transformation','50%+ Efficiency Gain','Nokia.com Website Modernisation','ServiceNow AI-augmentation (Now Assist)','Reactive-to-Predictive Ops Transformation','Cloud AWS/Azure/GCP','Platform Modernisation','Operating Model Redesign']
+    tags:['Agile Transformation','50%+ Efficiency Gain','Nokia.com Website Modernisation','ServiceNow AI-augmentation','Reactive-to-Predictive Ops','Cloud AWS/Azure/GCP','Platform Modernisation','Operating Model Redesign']
   },
   team: {
-    badge: { text:'TEAM', bg:'rgba(16,185,129,0.2)', color:'#6ee7b7' },
+    badge: {text:'TEAM',bg:'rgba(16,185,129,0.2)',color:'#6ee7b7'},
     title: 'Global Team & Delivery Leadership',
     paras: [
-      'Built and led 600+ FTE global teams — spanning employees and subcontractors — across a follow-the-sun operating model covering Americas, EMEA, APAC, and China. Built the Global Technical Expertise Centre (L3/L4) for Alcatel-Lucent\'s FTTH product line from scratch — scaling to ~45 professionals and achieving 40%+ cost savings for Tier-1 operators AT&T and Verizon.',
+      'Built and led 600+ FTE global teams spanning employees and subcontractors across a follow-the-sun operating model covering Americas, EMEA, APAC, and China. Built the Global Technical Expertise Centre (L3/L4) for Alcatel-Lucent FTTH product line from scratch scaling to ~45 professionals and achieving 40%+ cost savings for Tier-1 operators AT&T and Verizon.',
       'Deep expertise in global team building, succession planning, leadership pipeline development, and multi-vendor ecosystem governance. Consistently builds high-performance, customer-centric cultures across geographically distributed teams.'
     ],
-    tags:['600+ FTE Global Teams','Employees & Subcontractors','Follow-the-Sun Operations','Americas + EMEA + APAC + China','L3/L4 TEC Built from Scratch','40%+ Cost Savings','Succession Planning','Leadership Pipeline','Multi-vendor Governance']
+    tags:['600+ FTE Global Teams','Employees & Subcontractors','Follow-the-Sun Operations','Americas + EMEA + APAC + China','L3/L4 TEC Built from Scratch','40%+ Cost Savings','Succession Planning','Multi-vendor Governance']
   },
   telco: {
-    badge: { text:'TELCO', bg:'rgba(139,92,246,0.2)', color:'#c4b5fd' },
+    badge: {text:'TELCO',bg:'rgba(139,92,246,0.2)',color:'#c4b5fd'},
     title: 'Telecom & Networking Domain',
     paras: [
       '27-year telecom career spanning Nokia (current), Alcatel-Lucent, Riverstone Networks (startup acquired by Alcatel-Lucent), Extreme Networks (via Avaya), and Infosys/Nortel. Deep Nokia ecosystem knowledge and hands-on experience with Tier-1 operators AT&T and Verizon.',
-      'Direct client ownership of AT&T and Verizon at Alcatel-Lucent — managing escalations, outcome accountability, and QBR governance for mission-critical 24×7 product support. L2/L3 networking expertise from Nortel Passport product work at Infosys.'
+      'Direct client ownership of AT&T and Verizon at Alcatel-Lucent managing escalations, outcome accountability, and QBR governance for mission-critical 24x7 product support. L2/L3 networking expertise from Nortel Passport product work at Infosys.'
     ],
     tags:['Nokia Ecosystem','Alcatel-Lucent','Extreme Networks','AT&T & Verizon Direct','L2/L3 Networking','FTTH','IP Routing','Riverstone Networks Startup','Nortel/Passport Products']
   }
 };
 
-// ── MODAL OPEN/CLOSE ──
 function openModal(key) {
-  const d = modals[key];
-  const parasHtml = d.paras.map(p => `<p>${p}</p>`).join('');
-  const tagsHtml = d.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
-  document.getElementById('modalBody').innerHTML = `
-    <span class="modal-badge" style="background:${d.badge.bg};color:${d.badge.color};border:1px solid ${d.badge.color}50">${d.badge.text}</span>
-    <h3>${d.title}</h3>
-    <div class="modal-body">${parasHtml}</div>
-    <div class="modal-tags">${tagsHtml}</div>
-  `;
+  var d = modals[key];
+  if (!d) return;
+  var parasHtml = '';
+  for (var i = 0; i < d.paras.length; i++) {
+    parasHtml += '<p>' + d.paras[i] + '</p>';
+  }
+  var tagsHtml = '';
+  for (var j = 0; j < d.tags.length; j++) {
+    tagsHtml += '<span class="modal-tag">' + d.tags[j] + '</span>';
+  }
+  var html = '<span class="modal-badge" style="background:' + d.badge.bg + ';color:' + d.badge.color + ';border:1px solid ' + d.badge.color + '50">' + d.badge.text + '</span>';
+  html += '<h3>' + d.title + '</h3>';
+  html += '<div class="modal-body">' + parasHtml + '</div>';
+  html += '<div class="modal-tags">' + tagsHtml + '</div>';
+  document.getElementById('modalBody').innerHTML = html;
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1022,31 +466,49 @@ document.getElementById('modalClose').addEventListener('click', closeModal);
 document.getElementById('modalOverlay').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
 });
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-
-// ── SCROLL REVEAL ──
-const revealObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(function(el) {
-  el.classList.add('animate-hidden');
-  revealObserver.observe(el);
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
 });
 
-// ── NAV DOTS ──
-document.querySelectorAll('.dot').forEach(function(dot) {
-  dot.addEventListener('click', function() {
-    const target = this.getAttribute('data-target');
+var revealObserver = new IntersectionObserver(function(entries) {
+  for (var i = 0; i < entries.length; i++) {
+    if (entries[i].isIntersecting) {
+      entries[i].target.classList.add('visible');
+    }
+  }
+}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+var revealEls = document.querySelectorAll('.reveal');
+for (var r = 0; r < revealEls.length; r++) {
+  revealEls[r].classList.add('animate-hidden');
+  revealObserver.observe(revealEls[r]);
+}
+
+var dots = document.querySelectorAll('.dot');
+for (var d = 0; d < dots.length; d++) {
+  dots[d].addEventListener('click', function() {
+    var target = this.getAttribute('data-target');
     document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
   });
-});
+}
 
-const sections = ['sec0','sec1','sec2','sec3','sec4'];
-const dotObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isInters
+var sectionIds = ['sec0','sec1','sec2','sec3','sec4'];
+var dotObserver = new IntersectionObserver(function(entries) {
+  for (var i = 0; i < entries.length; i++) {
+    if (entries[i].isIntersecting) {
+      var id = entries[i].target.id;
+      var allDots = document.querySelectorAll('.dot');
+      for (var j = 0; j < allDots.length; j++) {
+        allDots[j].classList.toggle('active', allDots[j].getAttribute('data-target') === id);
+      }
+    }
+  }
+}, { threshold: 0.4 });
+
+for (var s = 0; s < sectionIds.length; s++) {
+  var secEl = document.getElementById(sectionIds[s]);
+  if (secEl) dotObserver.observe(secEl);
+}
+</script>
+</body>
+</html>
