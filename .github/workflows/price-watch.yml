@@ -1,0 +1,20 @@
+name: Price watch
+
+on:
+  schedule:
+    # Weekdays, mid-session and just before the European close.
+    - cron: "15 10,16 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tracker/price_watch.py
+        env:
+          WATCH_CONFIG: ${{ secrets.WATCH_CONFIG }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
