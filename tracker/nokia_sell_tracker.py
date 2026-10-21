@@ -16,7 +16,6 @@ import urllib.request
 from datetime import date, datetime, timezone
 
 SYMBOL = os.environ.get("SYMBOL", "NOKIA.HE")          # NOK for the NYSE ADR
-SHARES = int(os.environ.get("SHARES", "900"))
 TRANCHES = int(os.environ.get("TRANCHES", "3"))
 START = date.fromisoformat(os.environ.get("START_DATE", "2026-10-21"))
 END = date.fromisoformat(os.environ.get("END_DATE", "2026-11-20"))
@@ -88,7 +87,7 @@ def main():
     elif drawdown >= TRAIL_PCT and win_hi > start_px:
         action, why = "SELL ALL", f"Price fell {drawdown:.1f}% from the window high {win_hi:.2f}; trailing stop hit."
     elif score >= 3:
-        action, why = "SELL TRANCHE", f"{score}/5 top signals firing; sell {SHARES // TRANCHES} shares."
+        action, why = "SELL TRANCHE", f"{score}/5 top signals firing; sell 1 of {TRANCHES} lots."
     elif score == 2:
         action, why = "WATCH", "2/5 top signals; get your order ready."
     else:
@@ -100,7 +99,6 @@ def main():
 | Metric | Value |
 |---|---|
 | Price | {price:.3f} {ccy} |
-| Position value ({SHARES} sh) | {price * SHARES:,.0f} {ccy} |
 | Window start / high | {start_px:.3f} / {win_hi:.3f} ({drawdown:.1f}% off high) |
 | 52-week high | {hi52:.3f} |
 | RSI(14) | {r:.1f} |

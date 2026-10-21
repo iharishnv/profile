@@ -12,11 +12,10 @@ permissions:
 
 env:
   SYMBOL: NOKIA.HE
-  SHARES: "900"
   TRANCHES: "3"
   START_DATE: "2026-10-21"
   END_DATE: "2026-11-20"
-  TARGET_PRICE: ""
+  TARGET_PRICE: "9.8"  # "close to 10"
   TRAIL_PCT: "6"
   ISSUE_TITLE: "Nokia sell tracker"
 
