@@ -2,8 +2,9 @@ name: Price watch
 
 on:
   schedule:
-    # Weekdays, mid-session and just before the European close.
-    - cron: "15 10,16 * * 1-5"
+    # Weekdays: mid-session alert check, then the end-of-day report.
+    - cron: "15 10 * * 1-5"
+    - cron: "15 16 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -18,3 +19,4 @@ jobs:
         env:
           WATCH_CONFIG: ${{ secrets.WATCH_CONFIG }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DAILY_REPORT: ${{ github.event.schedule == '15 16 * * 1-5' }}

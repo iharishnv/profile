@@ -33,7 +33,8 @@ TARGET = CFG.get("target")
 FLOOR = CFG.get("floor")
 TRAIL_PCT = float(CFG.get("trail_pct", 6))    # drop from window high that forces exit
 FINAL_DAYS = int(CFG.get("final_days", 5))    # trading days before END to stop waiting
-ALWAYS_EMAIL = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+ALWAYS_EMAIL = (os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+                or os.environ.get("DAILY_REPORT") == "true")
 
 
 def fetch(symbol):
@@ -141,7 +142,7 @@ def send(subject, body):
 
 def main():
     action, price, ccy, body = evaluate()
-    # Scheduled runs email only when there is something to do; manual runs always report.
+    # The daily-report run and manual runs always email; the other run emails only on a signal.
     if ALWAYS_EMAIL or action in ("WATCH", "SELL LOT", "SELL ALL"):
         send(f"[{action}] {SYMBOL} at {price:.2f} {ccy}", body)
     print("ok")  # deliberately nothing else: Actions logs on a public repo are public
